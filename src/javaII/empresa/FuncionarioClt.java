@@ -2,5 +2,5 @@ package javaII.empresa;
 
 public interface FuncionarioClt {
 
-    public void pagarSalario();
+    void pagarSalario(double bonificacao, double salarioBase);
 }

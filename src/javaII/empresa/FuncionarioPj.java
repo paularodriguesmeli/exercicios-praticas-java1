@@ -5,11 +5,16 @@ public class FuncionarioPj extends Funcionario{
     private int horasTrabalhadas;
     private double valorHoraTrabalhada;
 
-    double salario;
-    public double pagarSalario(int horasTrabalhadas, double valorHoraTrabalhada) {
-        salario = horasTrabalhadas * valorHoraTrabalhada;
-        return salario;
+    public FuncionarioPj() {}
+
+    public FuncionarioPj(String nome, String cargo, int horasTrabalhadas, double valorHoraTrabalhada, double salario) {
+        super(nome, cargo);
+        this.horasTrabalhadas = horasTrabalhadas;
+        this.valorHoraTrabalhada = valorHoraTrabalhada;
+        this.salario = salario;
     }
+
+
 
     public int getHorasTrabalhadas() {
         return horasTrabalhadas;
@@ -19,11 +24,17 @@ public class FuncionarioPj extends Funcionario{
         this.horasTrabalhadas = horasTrabalhadas;
     }
 
-    public double getValorHoraTrabalahada() {
+    public double getValorHoraTrabalhada() {
         return valorHoraTrabalhada;
     }
 
-    public void setValorHoraTrabalahada(double valorHoraTrabalahada) {
-        this.valorHoraTrabalhada = valorHoraTrabalahada;
+    public void setValorHoraTrabalhada(double valorHoraTrabalhada) {
+        this.valorHoraTrabalhada = valorHoraTrabalhada;
+    }
+
+    double salario;
+    public void pagarSalario(int horasTrabalhadas, double valorHoraTrabalhada) {
+        salario = horasTrabalhadas * valorHoraTrabalhada;
+        System.out.println("O salário do funcionário PJ é: " + salario);
     }
 }
